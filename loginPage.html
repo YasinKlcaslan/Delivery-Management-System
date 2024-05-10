@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <script>
+          window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var error = urlParams.get("error");
+
+            if (error) {
+              alert(error);
+            }
+          };
+        </script>
+      </head>
+      <body></body>
+    </html>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+    <style>
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 600px;
+        text-align: left;
+      }
+
+      .input {
+        margin-bottom: 15px;
+      }
+
+      .input label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .input input,
+      .input select {
+        width: 70%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .button {
+        transition-duration: 0.4s;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 40px;
+        border: 2px solid green;
+      }
+
+      .button:hover {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">JetExpress</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="howMuch.html">Cost My Cargo?</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="loginPage.html">
+                <span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <?php if (isset($_GET['error'])) { ?>
+      <div class="alert alert-danger">
+        <?php echo $_GET['error']; ?>
+      </div>
+      <?php } ?>
+
+      <center>
+        <form action="login.php" method="post" onsubmit="return validateForm()">
+          <div class="input">
+            Username: <br />
+            <input
+              type="text"
+              class="input"
+              name="username"
+              id="username"
+              placeholder="Enter Your Username"
+              required
+            />
+            <br />
+          </div>
+
+          <div class="input">
+            Password: <br />
+            <input
+              type="password"
+              class="input"
+              name="password"
+              id="password"
+              placeholder="Enter Your Password"
+              required
+            />
+            <br />
+          </div>
+
+          <div>
+            <button type="submit" class="button">Login</button>
+          </div>
+        </form>
+      </center>
+    </div>
+
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username == "" || password == "") {
+          alert("Please enter your username and password.");
+          return false;
+        }
+
+        return true;
+      }
+
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username == "" || password == "") {
+          alert("Please enter your username and password.");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add New Cargo</title>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">JetExpress</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="howMuch.html">Cost My Cargo?</a></li>
+            <li><a href="shipmentTracking.html">Where is My Cargo?</a></li>
+            <li><a href="commentPanel.html">Give Us A Comment!</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="loginPage.html"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Add New Cargo</h2>
+      <form action="addCargo.php" method="post">
+        <div class="form-group">
+          <label for="branch_to">Destination Branch:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="branch_to"
+            name="branch_to"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="employee_name"
+            >Employee Performing the Transaction (Name and Surname):</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="employee_name"
+            name="employee_name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="sender_phone_number">Sender's Phone Number:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="sender_phone_number"
+            name="sender_phone_number"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="cargo_content">Cargo Content:</label>
+          <textarea
+            class="form-control"
+            id="cargo_content"
+            name="cargo_content"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="delivery_branch">Delivery Branch:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="delivery_branch"
+            name="delivery_branch"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="payment_type">Payment Type:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="payment_type"
+            name="payment_type"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="fee">Fee:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="fee"
+            name="fee"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="recipient_name">Recipient's Name and Surname:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="recipient_name"
+            name="recipient_name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="recipient_phone_number">Recipient's Phone Number:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="recipient_phone_number"
+            name="recipient_phone_number"
+            required
+          />
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Add Cargo" />
+      </form>
+    </div>
+  </body>
+</html>

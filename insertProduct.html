@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Insert Product</title>
+    <style>
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            text-align: left;
+        }
+
+        .input {
+            margin-bottom: 15px;
+        }
+
+        .input label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input input,
+        .input select {
+            width: 70%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            transition-duration: 0.4s;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            border: 2px solid green;
+        }
+
+        .button:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">JetExpress</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                            <li><a href="howMuch.html">Cost My Cargo?</a></li>
+                    <li><a href="shipmentTracking.html">Where is My Cargo?</a></li>
+                    <li><a href="commentPanel.html">Give Us A Comment!</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="loginPage.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <center>
+            <h2>Create a Cargo!</h2>
+            <form>
+                <div class="input">
+                    <label for="branch">Branch to which cargo is delivered:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="" disabled selected hidden>Please Choose</option>
+                        <option value="istanbul">İstanbul</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="adana">Adana</option>
+                        <option value="mersin">Mersin</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="senderName">Name and Surname of the Employee Performing the Transaction:</label>
+                    <input type="text" id="senderName" name="senderName" required>
+                </div>
+
+                <div class="input">
+                    <label for="senderName">Sender Name and Surname:</label>
+                    <input type="text" id="senderName" name="senderName" required>
+                </div>
+                <div class="input">
+                    <label for="senderTel">Sender Phone Number:</label>
+                    <input type="tel" id="senderTel" name="senderTel" required>
+                </div>
+
+                <div class="input">
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+                <div class="input">
+                    <label for="content">Content of the cargo:</label>
+                    <input type="text" id="content" name="content" required>
+                </div>
+                <div class="input">
+                    <label for="destinationBranch">Delivery Branch:</label>
+                    <select id="destinationBranch" name="destinationBranch" required>
+                        <option value="" disabled selected hidden>Please Choose</option>
+                        <option value="istanbul">İstanbul</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="adana">Adana</option>
+                        <option value="mersin">Mersin</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="transactionTime">Transaction Time:</label>
+                    <input type="text" id="transactionTime" name="transactionTime" required>
+                </div>
+                <div class="input">
+                    <label for="paymentType">Payment Type:</label>
+                    <select id="paymentType" name="paymentType" required>
+                        <option value="" disabled selected hidden>Please Choose</option>
+                        <option value="sender">Sender Pay</option>
+                        <option value="recipient">Buyer Pay</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="fee">Fee:</label>
+                    <input type="number" id="fee" name="fee" required>
+                </div>
+
+                <div class="input">
+                    <label for="recipientName">Recipient Name and Surname:</label>
+                    <input type="text" id="recipientName" name="recipientName" required>
+                </div>
+                <div class="input">
+                    <label for="recipientTel">Recipient Phone Number:</label>
+                    <input type="tel" id="recipientTel" name="recipientTel" required>
+                </div>
+
+                <button type="submit" class="button">Let's Create</button>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>
